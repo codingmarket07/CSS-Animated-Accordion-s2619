@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+}
+
+body{
+  background: #1f938a;
+}
+
+.wrapper{
+  width: 500px;
+  margin: 80px auto 0;
+}
+
+.wrapper .accordion_wrap .accordion_header{
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  padding: 15px;
+  color: #39a098;
+  font-weight: 700;
+  border-bottom: 2px solid #39a098;
+  position: relative;
+  cursor: pointer;
+}
+
+.wrapper .accordion_wrap:first-child .accordion_header{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.wrapper .accordion_wrap:last-child .accordion_header{
+  border-bottom: 2px solid transparent;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.wrapper .accordion_wrap:last-child .accordion_header:hover{
+  border-bottom: 2px solid transparent;
+}
+
+.wrapper .accordion_wrap .accordion_header:before,
+.wrapper .accordion_wrap .accordion_header:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: 20px;
+  height: 2px;
+  background: #39a098;
+}
+
+.wrapper .accordion_wrap .accordion_header:hover{
+  color: #01645d;
+  border-color: #01645d;
+}
+
+.wrapper .accordion_wrap .accordion_header:hover:before,
+.wrapper .accordion_wrap .accordion_header:hover:after{
+  background: #01645d;
+}
+
+.wrapper .accordion_wrap .accordion_header:after{
+  transform: rotate(-90deg);
+  transition: all 0.5s ease;
+}
+
+.wrapper .accordion_wrap .accordion_body{
+  width: 100%;
+  height: 0px;
+  transition: all 0.5s ease;
+  background: #39a098;
+  overflow: hidden;
+}
+
+.wrapper .accordion_wrap .accordion_body p{
+  padding: 15px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.wrapper .accordion_wrap .accordion_header.active{
+  color: #01645d; 
+  border-color: #01645d;
+}
+
+.wrapper .accordion_wrap:last-child .accordion_header.active{
+  border-bottom: 2px solid #01645d;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.wrapper .accordion_wrap .accordion_header.active:before,
+.wrapper .accordion_wrap .accordion_header.active:after{
+  background: #01645d;
+}
+
+.wrapper .accordion_wrap .accordion_header.active:after{
+  transform: rotate(0deg);
+}
+
+.wrapper .accordion_wrap .accordion_header.active + .accordion_body{
+  height: 180px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Animated Accordion</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".accordion_header").click(function(){
+			   $(".accordion_header").removeClass("active");
+			   $(this).addClass("active");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="accordion_wrap accordion_1">
+    <div class="accordion_header">
+      America
+    </div>
+    <div class="accordion_body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus culpa ducimus amet unde consequatur ullam ipsum repellendus eligendi quo nisi!</p>
+    </div>
+  </div>
+  <div class="accordion_wrap accordion_2">
+    <div class="accordion_header">
+      Germany
+    </div>
+    <div class="accordion_body">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus culpa ducimus amet unde consequatur ullam ipsum repellendus eligendi quo nisi!</p>
+    </div>
+  </div>
+  <div class="accordion_wrap accordion_3">
+    <div class="accordion_header">
+      India
+    </div>
+    <div class="accordion_body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus culpa ducimus amet unde consequatur ullam ipsum repellendus eligendi quo nisi!</p>
+    </div>
+  </div>
+  <div class="accordion_wrap accordion_4">
+    <div class="accordion_header">
+      Japan
+    </div>
+    <div class="accordion_body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus culpa ducimus amet unde consequatur ullam ipsum repellendus eligendi quo nisi!</p>
+    </div>
+  </div>
+  <div class="accordion_wrap accordion_5">
+    <div class="accordion_header">
+      Spain
+    </div>
+    <div class="accordion_body">
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus culpa ducimus amet unde consequatur ullam ipsum repellendus eligendi quo nisi!</p>
+    </div>
+  </div>
+</div>	
+
+</body>
+</html>
